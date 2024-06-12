@@ -1,0 +1,216 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar img {
+    margin-right: 20px;
+    margin-left: 20px;
+    height: 50px;
+}
+
+.checkout-container {
+    display: flex;
+    flex: 1;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.items-container, .payment-container, .receipt-container {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+}
+
+.items-container {
+    border-right: 1px solid #ddd;
+}
+
+.payment-container {
+    border-right: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.items-container ul {
+    margin-top: 60px;
+    list-style: none;
+    padding: 0;
+}
+
+.items-container li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.items-container img {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.totals {
+    margin-top: 20px;
+}
+
+.totals p, .totals h3 {
+    margin: 10px 0; /* Adjust the margin to reduce space between the elements */
+}
+
+.payment-approved {
+    display: flex;
+    align-items: center;
+    margin-top: 50px; /* Adjust as needed for spacing */
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+.payment-approved img {
+    width: 40px;
+    margin-right: 20px; /* Add space between the image and the text */
+}
+
+.payment-container h2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+}
+
+.receipt-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.centered {
+    text-align: center;
+}
+
+.centered h2 {
+    margin-bottom: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button.receiptoButton{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+    justify-content: flex-start; /* Align content to the left */
+}
+
+button img {
+    margin-right: 20px; /* Add space between the icon and the text */
+    width: 40px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button.receiptoButton {
+    background-color: #28a745;
+}
+
+button.receiptoButton:disabled {
+    background-color: #fff;
+    color: #28a745;
+    border: 2px solid #28a745;
+    cursor: not-allowed;
+}
+
+button.printButton {
+    text-align: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s;
+    justify-content: flex-start; /* Align content to the left */
+}
+
+
+.instructions{
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+}
+
+.spinner-container, #qrCodeContainer {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #28a745;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto; /* Centering the spinner */
+    margin-bottom: 30px;
+
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.hidden {
+    display: none;
+}
+
+.items-container h2, .payment-container h2, .receipt-container h2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+}
+
+hr {
+    margin-top: 20px;
+    border-color: #fff;
+    color: #fff;
+    background-color: #fff;
+}

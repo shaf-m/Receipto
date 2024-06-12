@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Checkout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-bar">
+        <img src="https://static.vecteezy.com/system/resources/previews/019/787/018/non_2x/shopping-cart-icon-shopping-basket-on-transparent-background-free-png.png" alt="Store Logo">
+        <h1>Self Checkout</h1>
+    </div>
+    <div class="checkout-container">
+        <div class="items-container">
+            <h2>Items</h2>
+            <ul>
+                <li>
+                    <img src="https://pantree.ca/cdn/shop/products/59c94bcd16bc0.png?v=1677862796" alt="Milk">
+                    Milk (Qty: 1) - $3.50
+                </li>
+                <li>
+                    <img src="https://i.pinimg.com/originals/6f/5f/53/6f5f5332cd54ba419022a4882935dbd5.png" alt="Bread">
+                    Bread (Qty: 1) - $2.00
+                </li>
+                <li>
+                    <img src="https://www.freeiconspng.com/uploads/download-apples-png-image-red-apple-fruit-10.png" alt="Apples">
+                    Apples (Qty: 1) - $4.00
+                </li>
+                <li>
+                    <img src="https://pngimg.com/d/cheese_PNG25303.png" alt="Cheese">
+                    Cheese (Qty: 1) - $5.00
+                </li>
+            </ul>
+            <hr>
+            <div class="totals">
+                <p>Subtotal: $14.50</p>
+                <p>GST (5%): $0.73</p>
+                <p>HST (13%): $1.89</p>
+                <h3>Total: $17.12</h3>
+            </div>
+        </div>
+        <div class="payment-container">
+            <h2>Payment</h2>
+            <div class="payment-approved">
+                <div class="checkmark-box">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eo_circle_green_checkmark.svg/800px-Eo_circle_green_checkmark.svg.png" alt="Payment Approved">
+                </div>
+                <h3>Payment Approved</h3>
+            </div>            
+        </div>            
+        <div class="receipt-container">
+            <h2>Receipt Options</h2>
+            <div class="centered">
+                <div class="buttons-container">
+                    <button id="receiptoButton" class="receiptoButton" onclick="sendToReceipto()">
+                        <img src="https://uxwing.com/wp-content/themes/uxwing/download/business-professional-services/receipt-icon.png" alt="Save Icon">
+                        Save to Receipto
+                    </button>
+                    <button id="printButton" class="printButton" onclick="printReceipt()">
+                        Print Receipt
+                    </button>
+                </div>
+                <div id="spinner" class="spinner-container hidden">
+                    <div class="spinner"></div>
+                    <p class="instructions">Generating QR Code...</p>
+                </div>
+                <div id="qrCodeContainer" class="hidden">
+                    <img id="qrCode" src="https://via.placeholder.com/150" alt="QR Code">
+                    <p class="instructions">Open scanner in app</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
